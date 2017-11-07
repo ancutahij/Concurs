@@ -15,6 +15,9 @@ def read_variable(mesaj):
             print ("Alegeti un numar. ")
     return x
 
+def print_message (message, list):
+    print (message, list)
+    
 def read_score():
     """
         Functia citeste un scor complet, asta insemand ca citeste scorul la cele 10 probe si il memoreaza in lista l.

@@ -3,9 +3,7 @@ Created on Oct 25, 2017
 
 @author: Ancuta
 '''
-'''
-test
-'''
+
 from validation import validation_list
 from infrastructure import * 
 from ui import read_variable
