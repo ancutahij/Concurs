@@ -284,8 +284,7 @@ def return_undo( undo, number):
         x=undo[len(undo)-1]
         del undo[len(undo)-1]
         return x
-    else:
-        return undo
+    
     
     
     

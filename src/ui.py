@@ -221,11 +221,11 @@ def menu_undo(list, undo):
         op=read_variable("Alege o optiune: ")
         
         if op==1:
-            x=[]
+            
             number=read_variable("Citeste un numar: ")
-            x.append(return_undo(undo, number))
-            if len(x)==1 :
-                list[:]=[] # pentru a nu avea paranteze suplimentare
+            x=return_undo(undo, number)
+            if x is not None :
+                #list[:]=[] 
                 list[:]= x
         elif op==2:
             print_message("Lista undo este: ", undo) 
@@ -267,10 +267,9 @@ def run_UI ():
         except KeyError:
             print(" Nu ati introdus o instructiune valida.")
 
-        
 if __name__=="__main__":    
     run_UI()
    
-undo=[[], [[1, 2, 2, 3, 3, 3, 3, 3, 4, 4]], [[1, 2, 2, 3, 3, 3, 3, 3, 4, 4], [5, 6, 6, 5, 6, 5, 6, 4, 6, 5]]]
-list=[[1, 2, 2, 3, 3, 3, 3, 3, 4, 4], [5, 6, 6, 5, 6, 5, 6, 4, 6, 5], [4, 5, 5, 5, 5, 5, 5, 5, 5, 5]]
+#undo=[[], [[1, 2, 2, 3, 3, 3, 3, 3, 4, 4]], [[1, 2, 2, 3, 3, 3, 3, 3, 4, 4], [5, 6, 6, 5, 6, 5, 6, 4, 6, 5]]]
+#list=[[1, 2, 2, 3, 3, 3, 3, 3, 4, 4], [5, 6, 6, 5, 6, 5, 6, 4, 6, 5], [4, 5, 5, 5, 5, 5, 5, 5, 5, 5]]
 #menu_undo(list, undo)

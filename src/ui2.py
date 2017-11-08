@@ -267,10 +267,9 @@ def menu_undo(list, undo):
         l=[]
         l=op.split("+")
         if l[0].lower()=="undo operatii":
-            x=[]
-            x.append(return_undo(undo, int(l[1])))
-            if len(x)==1:
-                list[:]=[]
+            
+            x=return_undo(undo, int(l[1]))
+            if x is not None:
                 list[:]=x
         elif l[0].lower()=="afisare undo":
             print_message("Lista undo este: ", undo)
